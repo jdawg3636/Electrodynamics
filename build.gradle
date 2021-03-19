@@ -52,7 +52,7 @@ configFile.withReader {
 	ext.config = new ConfigSlurper().parse prop
 }
 
-version = "${config.minecraft_version}-${config.version_major}.${config.version_minor}.${config.version_revision}-${config.version_build}"
+version = "${config.minecraft_version}-${config.version_major}.${config.version_minor}.${config.version_revision}-${config.version_build}-JD3636PATCH"
 group= "physica"
 archivesBaseName = "PhysicaAll"
 sourceCompatibility = 1.8

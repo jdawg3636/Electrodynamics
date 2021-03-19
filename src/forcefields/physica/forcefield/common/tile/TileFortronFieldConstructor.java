@@ -141,11 +141,11 @@ public class TileFortronFieldConstructor extends TileBaseContainer implements II
 	public void damageForcefield(int amount)
 	{
 		int fortronUse = getFortronUse();
-		if (fortronUse == 0)
+		if (fortronUse < 5 || activeFields.size() < maximumForceFieldCount / 1.5)
 		{
-			return;
+			return; //Blast goes right through the field
 		}
-		double increase = amount / (double) fortronUse * ConfigForcefields.FORCEFIELD_HEALTHLOSS_MODIFIER * 100000;
+		double increase = (amount / (double) fortronUse) * ConfigForcefields.FORCEFIELD_HEALTHLOSS_MODIFIER * 10000;
 		healthLost += increase;
 		if (healthLost >= MAX_HEALTH_LOSS || increase > MAX_HEALTH_LOSS)
 		{
