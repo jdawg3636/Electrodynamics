@@ -17,11 +17,12 @@ import physica.library.location.GridLocation;
 import physica.library.tile.TileBaseContainer;
 import physica.nuclear.client.gui.GuiNeutronCaptureChamber;
 import physica.nuclear.common.NuclearItemRegister;
+import physica.nuclear.common.configuration.ConfigNuclearPhysics;
 import physica.nuclear.common.inventory.ContainerNeutronCaptureChamber;
 
 public class TileNeutronCaptureChamber extends TileBaseContainer implements IGuiInterface {
 
-	public static final int		TICKS_REQUIRED			= 2847;
+	public static final int		TICKS_REQUIRED			= ConfigNuclearPhysics.NEUTRON_CAPTURE_TICKS_REQUIRED;
 	public static final int		SLOT_INPUT				= 0;
 	public static final int		SLOT_OUTPUT				= 1;
 	private static final int[]	ACCESSIBLE_SLOTS_UP		= new int[] { SLOT_INPUT };

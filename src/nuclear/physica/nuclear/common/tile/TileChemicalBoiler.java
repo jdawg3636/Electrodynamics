@@ -28,12 +28,13 @@ import physica.library.recipe.RecipeSystem;
 import physica.library.tile.TileBasePoweredContainer;
 import physica.nuclear.client.gui.GuiChemicalBoiler;
 import physica.nuclear.common.NuclearFluidRegister;
+import physica.nuclear.common.configuration.ConfigNuclearPhysics;
 import physica.nuclear.common.inventory.ContainerChemicalBoiler;
 import physica.nuclear.common.recipe.type.ChemicalBoilerRecipe;
 
 public class TileChemicalBoiler extends TileBasePoweredContainer implements IGuiInterface, IFluidHandler {
 
-	public static final int		TICKS_REQUIRED			= 800;
+	public static final int		TICKS_REQUIRED			= ConfigNuclearPhysics.CHEMICAL_BOILER_TICKS_REQUIRED;
 	public static final int		POWER_USAGE				= ElectricityUtilities.convertEnergy(1500, Unit.WATT, Unit.RF);
 	public static final int		SLOT_ENERGY				= 0;
 	public static final int		SLOT_INPUT1				= 1;

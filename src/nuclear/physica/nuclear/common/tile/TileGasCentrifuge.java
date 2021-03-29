@@ -28,11 +28,12 @@ import physica.library.tile.TileBasePoweredContainer;
 import physica.nuclear.client.gui.GuiCentrifuge;
 import physica.nuclear.common.NuclearFluidRegister;
 import physica.nuclear.common.NuclearItemRegister;
+import physica.nuclear.common.configuration.ConfigNuclearPhysics;
 import physica.nuclear.common.inventory.ContainerCentrifuge;
 
 public class TileGasCentrifuge extends TileBasePoweredContainer implements IGuiInterface, IFluidHandler {
 
-	public static final int		TICKS_REQUIRED			= 2400;
+	public static final int		TICKS_REQUIRED			= ConfigNuclearPhysics.GAS_CENTRIFUGE_TICKS_REQUIRED;
 	public static final int		SLOT_ENERGY				= 0;
 	public static final int		POWER_USAGE				= ElectricityUtilities.convertEnergy(3000, Unit.WATT, Unit.RF);
 	public static final int		SLOT_OUTPUT1			= 1;

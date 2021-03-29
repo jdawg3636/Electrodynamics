@@ -27,12 +27,13 @@ import physica.library.energy.base.Unit;
 import physica.library.recipe.RecipeSystem;
 import physica.library.tile.TileBasePoweredContainer;
 import physica.nuclear.client.gui.GuiChemicalExtractor;
+import physica.nuclear.common.configuration.ConfigNuclearPhysics;
 import physica.nuclear.common.inventory.ContainerChemicalExtractor;
 import physica.nuclear.common.recipe.type.ChemicalExtractorRecipe;
 
 public class TileChemicalExtractor extends TileBasePoweredContainer implements IGuiInterface, IFluidHandler {
 
-	public static final int		TICKS_REQUIRED			= 400;
+	public static final int		TICKS_REQUIRED			= ConfigNuclearPhysics.CHEMICAL_EXTRACTOR_TICKS_REQUIRED;
 	public static final int		POWER_USAGE				= ElectricityUtilities.convertEnergy(1500, Unit.WATT, Unit.RF);
 	public static final int		SLOT_ENERGY				= 0;
 	public static final int		SLOT_INPUT				= 1;
